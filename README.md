@@ -46,22 +46,31 @@ sqlcmd -S localhost -U SA -Q 'select @@VERSION'
 sudo ufw status
 
 sudo ufw enable
+
 sudo ufw allow 1433
+
 sudo ufw allow 1434
+
 sudo ufw reload
+
 sudo ufw status
 
 extra
 ================
 
 sudo apt-get install -y libodbc1
+
 sudo apt update
+
 sudo apt install unixodbc
 
 
 extra
 ================
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
 echo "deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/prod bionic main" | sudo tee /etc/apt/sources.list.d/mssql-release.list
+
 sudo apt update
+
 sudo apt install msodbcsql17
